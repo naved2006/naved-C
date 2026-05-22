@@ -1,0 +1,13 @@
+"use strict";
+let a = 10;
+let b = 20;
+console.log("Before Swap:");
+console.log("a =", a);
+console.log("b =", b);
+let temp;
+temp = a;
+a = b;
+b = temp;
+console.log("After Swap:");
+console.log("a =", a);
+console.log("b =", b);
