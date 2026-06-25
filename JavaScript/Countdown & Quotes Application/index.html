@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Countdown Project</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🚀 Event Countdown</h1>
+
+   
+    <div class="countdown-box">
+        <h2 id="countdown">Loading...</h2>
+
+        <button onclick="startCountdown()">Start</button>
+        <button onclick="pauseCountdown()">Pause</button>
+    </div>
+
+   
+    <div class="quote-box">
+        <h2> Motivational Quotes</h2>
+
+        <p id="quote"></p>
+
+        <div class="quote-btns">
+            <button onclick="prevQuote()">⬅ Previous</button>
+            <button onclick="nextQuote()">Next ➡</button>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="closeBtn">&times;</span>
+
+        <h2>🎉 Welcome!</h2>
+
+        <p>
+            Upcoming Event Countdown Started.
+            Stay Motivated and Keep Learning!
+        </p>
+    </div>
+</div>
+
+<script src="./index.js"></script>
+
+</body>
+</html>
