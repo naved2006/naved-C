@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Quiz App</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./Quiz.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="bg-circle circle1"></div>
+    <div class="bg-circle circle2"></div>
+
+    <!-- START SCREEN -->
+
+    <section class="start-screen active">
+
+        <div class="card">
+
+            <h1> Frontend Quiz</h1>
+
+            <div class="quiz-info">
+
+                <div class="info-box">
+                    <h3>10</h3>
+                    <p>Questions</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>30s</h3>
+                    <p>Timer</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>MCQ</h3>
+                    <p>Type</p>
+                </div>
+
+            </div>
+
+            <button id="startBtn" class="btn">
+                Start Quiz
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- QUIZ SCREEN -->
+
+    <section class="quiz-screen">
+
+        <div class="quiz-container">
+
+            <!-- Header -->
+
+            <div class="quiz-header">
+
+                <h2>Frontend Quiz</h2>
+
+                <div class="timer">
+                    ⏱️
+                    <span id="time">30</span>s
+
+                </div>
+
+            </div>
+
+            <!-- Progress -->
+
+            <div class="progress-area">
+
+                <div class="progress-text">
+
+                    Question
+                    <span id="currentQuestion">1</span>
+                    /
+                    <span id="totalQuestion">10</span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div id="progress"></div>
+
+                </div>
+
+            </div>
+
+            <!-- Question -->
+
+            <div class="question-area">
+
+                <h2 id="question">
+
+                    Question comes here...
+
+                </h2>
+
+            </div>
+
+            <!-- Options -->
+
+            <div id="options" class="options">
+
+                <!-- JS -->
+
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="buttons">
+
+                <button id="prevBtn" class="btn secondary">
+                    Previous
+                </button>
+
+                <button id="nextBtn" class="btn">
+                    Next
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RESULT -->
+
+    <section class="result-screen">
+
+        <div class="card">
+
+            <h1>🎉 Quiz Completed</h1>
+
+            <div class="score-circle">
+
+                <span id="score">
+                    0/10
+                </span>
+
+            </div>
+
+            <div class="result-details">
+
+                <p>
+                    ✅ Correct :
+                    <span id="correct">0</span>
+                </p>
+
+                <p>
+                    ❌ Wrong :
+                    <span id="wrong">0</span>
+                </p>
+
+            </div>
+
+            <button id="restartBtn" class="btn">
+                Restart Quiz
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- JS -->
+
+    <script src="./Quiz.js"></script>
+
+</body>
+
+</html>
