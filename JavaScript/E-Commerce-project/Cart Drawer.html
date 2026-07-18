@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FURNS - Shopping Cart Drawer</title>
+    <link rel="stylesheet" href="./Cart Drawer.css">
+    <!-- FontAwesome Icons ke liye -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section with Cart Icon -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">FURNS</div>
+            <div class="cart-icon-wrapper" id="cartTrigger">
+                <i class="fa-solid fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCountBadge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Section (Sample) -->
+    <main class="product-container">
+        <div class="product-card">
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&auto=format&fit=crop" alt="Living Room Sofa">
+                <button class="add-to-cart-btn" id="addToCartBtn">Add to Cart</button>
+            </div>
+            <h3>Living Room Sets</h3>
+            <p class="price">$1540.00</p>
+        </div>
+    </main>
+
+    <!-- 1. Dynamic Toast Notification -->
+    <div class="toast-notification" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span>Successfully Added! <br><small>Living Room Sets is added to cart.</small></span>
+    </div>
+
+    <!-- 2. Sliding Cart Drawer (Sidebar) -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2>Cart</h2>
+            <button class="close-btn" id="closeCartBtn">&times;</button>
+        </div>
+
+        <!-- Cart Content (Isme JS ke through products dynamically add honge) -->
+        <div class="cart-body" id="cartBody">
+            <!-- Empty State default mein dikhega -->
+            <div class="empty-cart-state" id="emptyCartState">
+                <div class="empty-bag-icon">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                </div>
+                <p>There are no products!</p>
+            </div>
+
+            <!-- Active Cart Item Section -->
+            <div class="cart-items-wrapper" id="cartItemsWrapper" style="display: none;">
+                <div class="cart-item">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&auto=format&fit=crop" alt="Sofa">
+                    <div class="item-details">
+                        <h4>Living Room Sets</h4>
+                        <p class="item-price-calc">1 x <span class="base-price">$1540.00</span></p>
+                        <div class="quantity-controls">
+                            <button id="qtyMinus">-</button>
+                            <span id="qtyVal">1</span>
+                            <button id="qtyPlus">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-item-btn" id="removeItemBtn">&times;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Footer (Sirf tabhi dikhega jab cart mein item ho) -->
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="subtotal-row">
+                <span>View Cart</span>
+                <span class="total-price" id="cartTotalPrice">$1540.00</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Cart Drawer.js"></script>
+</body>
+</html>

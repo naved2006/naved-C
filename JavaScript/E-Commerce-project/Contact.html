@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FURN</title>
+    <link rel="stylesheet" href="./Contact.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <!-- Logo Section -->
+            <div class="logo-area">
+                <a href="#" class="logo-link">
+                    <img src="./img/_images_logo_logo.png" alt="Furniture Icon" class="logo-icon"> <!-- Icon image add karein -->
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="navigation-menu">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./Bedroom.html">Home Furniture</a></li>
+                    <li><a href="#">Office Furniture</a></li>
+                    <li><a href="#">Hospital Furniture</a></li>
+                    <li class="active"><a href="./Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="contact-container">
+        
+        <!-- Breadcrumb Section -->
+        <div class="breadcrumb-section">
+            <h1>CONTACT</h1>
+            <p>HOME / CONTACT</p>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map-section">
+            <iframe
+                title="Google Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153168!3d-37.81720997975173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2s121%20King%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sin!4v1625645424564!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style="border: 0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content-wrapper">
+            
+            <!-- Contact Info Sidebar -->
+            <div class="contact-info">
+                <h2>Contact Info</h2>
+                
+                <div class="info-group">
+                    <p class="label">Phone:</p>
+                    <p>+012 345 678 102</p>
+                    <p>+012 345 678 203</p>
+                </div>
+
+                <div class="info-group">
+                    <p class="label">Email:</p>
+                    <p>email@here.com</p>
+                    <p>your@email.here</p>
+                </div>
+
+                <div class="info-group">
+                    <p class="label">Address:</p>
+                    <p>Address goes here,<br>street, Crossroad 123.</p>
+                </div>
+            </div>
+
+            <!-- Get In Touch Form -->
+            <div class="contact-form-section">
+                <h2>Get In Touch</h2>
+                
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="main-footer">
+    <!-- Container wrapper jo dono side se margin/padding set karega -->
+    <div class="footer-container">
+        
+        <!-- Column 1: About Us -->
+        <div class="footer-column about-us">
+            <h3>ABOUT US</h3>
+            <p>Lorem ipsum dolor sit amet cons adipisicing elit sed do eiusmo tempor incididunt ut labor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+        </div>
+
+        <!-- Column 2: Information -->
+        <div class="footer-column">
+            <h3>INFORMATION</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Manufactures</a></li>
+                <li><a href="#">Tracking Order</a></li>
+                <li><a href="#">Privacy & Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: My Account -->
+        <div class="footer-column">
+            <h3>MY ACCOUNT</h3>
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">My Cart</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li><a href="#">Compare</a></li>
+                <li><a href="#">My Account</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-column newsletter">
+            <h3>NEWSLETTER</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter E-Mail Address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Bottom Footer bar (Copyright and Payment) -->
+    <div class="footer-bottom">
+        <div class="footer-container bottom-flex">
+            <p>&copy; 2026. Furns. Made With <span class="heart">♥</span> by HasThemes.</p>
+            <div class="payment-methods">
+                <span>PayPal</span>
+                <span>VISA</span>
+                <span>MASTER</span>
+                <span>AMEX</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <!-- JavaScript File Linking -->
+    <script src="./Contact.js"></script>
+</body>
+</html>

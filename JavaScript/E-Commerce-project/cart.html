@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Furns</title>
+    <!-- Bootstrap Icons CSS (Icons ke liye) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #333;
+        }
+
+        /* Header Style (Furns Theme) */
+        .checkout-header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #f4f5f7;
+            margin-bottom: 50px;
+        }
+
+        .checkout-header h1 {
+            font-size: 36px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .checkout-header p {
+            color: #ff7004;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Main Container */
+        .checkout-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 80px 20px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 50px;
+        }
+
+        @media (max-width: 991px) {
+            .checkout-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Billing Form Styles */
+        .billing-section h3, .order-section h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ff7004;
+            width: fit-content;
+        }
+
+        .form-group-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group-row div {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            color: #474747;
+            margin-bottom: 8px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e1e1e1;
+            background-color: #fff;
+            outline: none;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #ff7004;
+        }
+
+        /* Order Box Styles */
+        .order-box {
+            background-color: #fff;
+            border: 1px solid #ebebeb;
+            padding: 30px;
+        }
+
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .summary-table th {
+            text-align: left;
+            font-size: 16px;
+            font-weight: 500;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .summary-table td {
+            padding: 15px 0;
+            border-bottom: 1px solid #ebebeb;
+            font-size: 14px;
+        }
+
+        .product-item-row td {
+            color: #666;
+        }
+
+        .total-row td {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ff7004;
+            border-bottom: none;
+            padding-top: 20px;
+        }
+
+        /* Place Order Button */
+        .btn-place-order {
+            display: block;
+            width: 100%;
+            background-color: #212529;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-place-order:hover {
+            background-color: #ff7004;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="checkout-header">
+        <h1>Checkout</h1>
+        <p>HOME / CHECKOUT</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="checkout-container">
+        
+        <!-- Left Side: Billing Form -->
+        <div class="billing-section">
+            <h3>Billing Details</h3>
+            <form id="checkout-form">
+                <div class="form-group-row">
+                    <div>
+                        <label>First Name *</label>
+                        <input type="text" required>
+                    </div>
+                    <div>
+                        <label>Last Name *</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Country *</label>
+                    <select required>
+                        <option value="India">India</option>
+                        <option value="United States">United States</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Street Address *</label>
+                    <input type="text" placeholder="House number and street name" required style="margin-bottom: 10px;">
+                    <input type="text" placeholder="Apartment, suite, unit etc. (optional)">
+                </div>
+
+                <div class="form-group">
+                    <label>Town / City *</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group-row">
+                    <div>
+                        <label>State *</label>
+                        <input type="text" required>
+                    </div>
+                    <div>
+                        <label>Postcode / ZIP *</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+
+                <div class="form-group-row">
+                    <div>
+                        <label>Phone *</label>
+                        <input type="tel" required>
+                    </div>
+                    <div>
+                        <label>Email Address *</label>
+                        <input type="email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Order Notes (Optional)</label>
+                    <textarea rows="4" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Side: Order Summary -->
+        <div class="order-section">
+            <h3>Your Order</h3>
+            <div class="order-box">
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th style="text-align: right;">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="checkout-products-list">
+                        <!-- Dynamic Cart items yahan render honge -->
+                    </tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td>Grand Total</td>
+                            <td style="text-align: right;" id="checkout-grand-total">$0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <button type="submit" form="checkout-form" class="btn-place-order">Place Order</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript code for fetching localstorage data -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. LocalStorage se cart products ko uthana
+            let cart = JSON.parse(localStorage.getItem("furnsCart")) || [];
+            const listContainer = document.getElementById("checkout-products-list");
+            const grandTotalContainer = document.getElementById("checkout-grand-total");
+
+            let itemsHTML = "";
+            let totalSum = 0;
+
+            // 2. Agar cart khali hai toh redirect ya message show karna
+            if (cart.length === 0) {
+                listContainer.innerHTML = `<tr><td colspan="2" style="text-align: center; color: #888;">Your cart is empty!</td></tr>`;
+                grandTotalContainer.textContent = "$0.00";
+                return;
+            }
+
+            // 3. Loop chala kar cart ke details render karna
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                totalSum += itemTotal;
+
+                itemsHTML += `
+                    <tr class="product-item-row">
+                        <td>${item.name} <strong> × ${item.quantity}</strong></td>
+                        <td style="text-align: right;">$${itemTotal.toFixed(2)}</td>
+                    </tr>
+                `;
+            });
+
+            listContainer.innerHTML = itemsHTML;
+            grandTotalContainer.textContent = `$${totalSum.toFixed(2)}`;
+
+            // 4. Form Submit handle (Place Order Alert + Cart Clear)
+            const checkoutForm = document.getElementById("checkout-form");
+            checkoutForm.addEventListener("submit", (e) => {
+                e.preventDefault(); // Default reload rokne ke liye
+                
+                alert("🎉 Order Placed Successfully! Thank you for shopping with Furns.");
+                
+                // Storage saaf karna aur home par bhej dena
+                localStorage.removeItem("furnsCart");
+                window.location.href = "index.html";
+            });
+        });
+    </script>
+</body>
+</html>

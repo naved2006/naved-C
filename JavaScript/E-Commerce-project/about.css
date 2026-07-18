@@ -1,0 +1,455 @@
+/* --- Global Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+     font-family: "Montserrat", sans-serif;
+    color: #222222;
+    background-color: #ffffff;
+    line-height: 1.7;
+}
+
+/* --- Header Navigation Styles --- */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Flexbox setup to align Logo left and Menu right */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo img {
+    height: 40px; /* Logo ka size clean rakhne ke liye */
+    display: block;
+}
+
+/* Navigation List */
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Menu items ke beech ka gap */
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu Links styling */
+.nav-menu ul li a {
+    text-decoration: none; /* Underline hatane ke liye */
+    color: #474747;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect aur Active link color (Furns Orange) */
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+    color: #ff7004;
+}
+
+/* Responsive adjustment: mobile par scrollable ya stack ho jaye */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* --- Header Wrapper --- */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 25px 0; /* Upar aur neeche thoda padding taaki clean lage */
+    width: 100%;
+}
+
+/* --- Container Fix (Dono taraf se padding balanced rakhne ke liye) --- */
+.header-container {
+    max-width: 1140px; /* Ya jo bhi aapke baaki page ka max-width hai */
+    margin: 0 auto;
+    padding: 0 40px; /* Left aur Right mein extra space (padding) jo items ko kone se chipakne nahi dega */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Navigation List Spacing --- */
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 35px; /* Har menu item ke beech ka standard spacing */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Breadcrumb Style --- */
+.breadcrumb-section {
+    background-color: #f6f6f6;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.breadcrumb-section h1 {
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.breadcrumb-links {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+.breadcrumb-links a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb-links a:hover {
+    color: #ff7004; /* Furns Theme Color */
+}
+
+/* --- About Main Area --- */
+.about-main {
+    padding: 80px 0;
+}
+
+.intro-lead {
+    font-size: 22px;
+    font-weight: 400;
+    max-width: 900px;
+    margin: 0 auto 50px auto; /* 'margin: 0 auto' lagane se box horizontal center ho jayega */
+    text-align: center;       /* Isse text andar se center align ho jayega */
+    color: #111;
+    line-height: 1.5;
+}
+
+
+
+/* --- Images Side-by-Side Grid --- */
+.image-gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 450px; /* Aap is height ko apne hisab se kam ya zyada (e.g., 400px ya 500px) kar sakte hain */
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Yeh sabse important hai! Isse dono images bina stretch ya kharab hue exact same box size me fit ho jayengi */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Hover effect */
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+@media (min-width: 768px) {
+    .image-gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.gallery-item {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Image par hover effects */
+.gallery-item:hover img {
+    transform: scale(1.03);
+}
+
+/* --- Text Description Grid --- */
+.description-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+@media (min-width: 768px) {
+    .description-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.desc-box h2 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: #111;
+    position: relative;
+}
+
+.desc-box p {
+    font-size: 14px;
+    color: #666;
+    text-align: justify;
+}
+
+
+/* --- Footer Main Styles --- */
+.main-footer {
+    background-color: #2b2d35; /* Dark gray background */
+    color: #a1a2a6; /* Light gray text for inner content */
+    font-family: 'Arial', sans-serif;
+    padding-top: 60px;
+}
+
+/* Container jo content ko center mein rakhega aur side se chipakne se rokega */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px; /* Yeh padding corners se gap banayegi */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Footer Columns */
+.footer-column {
+    flex: 1;
+    min-width: 220px; /* Responsive design ke liye */
+}
+
+/* Text aur Titles spacing */
+.footer-column h3 {
+    color: #fff; /* Titles white rahenge */
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Lists and Links Styling */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #a1a2a6;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ff6f2e; /* Hover par orange highlight */
+    border-bottom: 1px solid #ff6f2e;
+}
+
+/* --- Newsletter Form (Column 4) --- */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    background-color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.newsletter-form button {
+    background-color: #ff6f2e; /* Theme Orange */
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #e55a1c;
+}
+
+/* --- Bottom Footer copyright area --- */
+.footer-bottom {
+    background-color: #212227; /* Thoda aur dark background */
+    padding: 20px 0;
+    margin-top: 60px;
+    border-top: 1px solid #383a42;
+}
+
+.bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #8c8d91;
+}
+
+.footer-bottom .heart {
+    color: #ff6f2e;
+}
+
+/* Payment logos styling */
+.payment-methods {
+    display: flex;
+    gap: 8px;
+}
+
+.payment-methods span {
+    background-color: #fff;
+    color: #333;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+/* Responsive view ke liye */
+@media (max-width: 768px) {
+    .bottom-flex {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .offer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-content {
+        right: 25px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-bottom-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .promo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-card {
+        height: 280px;
+    }
+
+    .promo-content {
+        left: 30px;
+    }
+
+    .promo-content h2 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-tabs {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+}
+
+/* ANIMATION */
