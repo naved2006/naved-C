@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌤️ Weather Dashboard</title>
+    <link rel="stylesheet" href="./API.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+   <div class="container">
+    <h1>🌤️ Weather App</h1>
+    
+    <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city..." value="Surat">
+        <button onclick="getWeather()">🔍 Search</button>
+    </div>
+    
+    <button class="location-btn" onclick="getLocation()">📍 Current Location</button>
+    
+    <div id="status" class="status"></div>
+    
+    <div id="weatherCard" class="weather-card">
+        <div>
+            <span class="city-name" id="cityName">--</span>
+            <span class="country" id="country">--</span>
+        </div>
+        
+        <div class="weather-main">
+            <img id="icon" src="" alt="weather">
+            <div>
+                <div class="temp" id="temp">--°C</div>
+                <div class="desc" id="desc">--</div>
+            </div>
+        </div>
+        
+        <div class="details">
+            <div class="detail-item">
+                <label>🌡️ Feels Like</label>
+                <span id="feelsLike">--°C</span>
+            </div>
+            <div class="detail-item">
+                <label>💧 Humidity</label>
+                <span id="humidity">--%</span>
+            </div>
+            <div class="detail-item">
+                <label>💨 Wind</label>
+                <span id="wind">-- m/s</span>
+            </div>
+            <div class="detail-item">
+                <label>📊 Pressure</label>
+                <span id="pressure">-- hPa</span>
+            </div>
+        </div>
+        
+        <div class="forecast" id="forecast"></div>
+    </div>
+    
+    <div class="footer">Made with ❤️ | Powered by wttr.in (No API Key Required)</div>
+</div>
+
+    <script src="./API.js"></script>
+</body>
+</html>
